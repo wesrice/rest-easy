@@ -1,0 +1,23 @@
+language: php
+
+php:
+  - 5.3
+  - 5.4
+  - 5.5
+  - hhvm
+
+before_script:
+  - composer self-update
+  - git clone git://github.com/donquixote/composer.git -b feature/psr4-complete
+  - cd composer && composer install && cd ../
+  - ./composer/bin/composer install
+  - pyrus install pear/PHP_CodeSniffer
+  - phpenv rehash
+
+script:
+  - phpcs --standard=psr2 src/
+  - phpunit --coverage-text
+
+matrix:
+  allow_failures:
+    - php: hhvm

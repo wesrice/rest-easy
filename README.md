@@ -21,6 +21,8 @@ If you want to filter the results, append the parameters that you want to filter
 
 The data that is returned in the response is the basic model of the element type. In addition, all of the custom fields are retrieved automatically and in a nested fashion. This means that if you have an entry with 5 custom fields that is related to an entry with 9 custom fields, the parent entry will return with its 5 custom fields tied to the entry and the related entry will also have its 9 custom fields.
 
+With this method of autoretrieving custom fields, you need to make sure that you don't relate an element to itself, or you'll end up with an infinite loop and PHP will hate you.
+
 
 ### To-Do
 * Move business logic into a service

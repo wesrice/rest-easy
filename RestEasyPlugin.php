@@ -1,8 +1,6 @@
 <?php
 namespace Craft;
 
-require_once( 'helpers/RestEasy_TransformerHelper.php' );
-
 class RestEasyPlugin extends BasePlugin
 {
 
@@ -27,7 +25,7 @@ class RestEasyPlugin extends BasePlugin
     }
 
     function hasCpSection(){
-        return true;
+        return false;
     }
 
 }

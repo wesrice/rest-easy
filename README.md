@@ -15,7 +15,7 @@ return array(
 **Optional** - Install the JSON Formatter extension for Google Chrome. This nifty extension formats json output in a collapsable tree. https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en
 
 ## Usage
-The general structure of the API endpoint is `http://{name-of-your-site}.com/api/{elementType}/{id}`. The `elementType` is required and the `id` is optional. If only the `elementType` is supplied, then you get a listing of that element type, with a default limit of 100 elements (the Craft default). Native element types include `Entry`, `User`, `Asset`, and `Category` among others. You can also use the lowercase versions of these element types in the uri. 
+The general structure of the API endpoint is `http://{name-of-your-site}.com/api/{elementType}/{id}`. The `elementType` is required and the `id` is optional. If only the `elementType` is supplied, then you get a listing of that element type, with a default limit of 100 elements (the Craft default). Native element types include `Entry`, `User`, `Asset`, and `Category` among others. You can also use the lowercase versions of these element types in the uri.
 
 The data that is returned in the response is the model of the element type.
 
@@ -28,8 +28,8 @@ Embeds are a way to retrieve additional data that describes an element. For exam
 
 
 ## To-Do
-* Move business logic into a service
-* _post()
-* _delete()
-* Hooks to extend transforms for custom field types
-* oAuth 2.0 integration
+* Add config file for setting authentication keys and default embeds
+* Post
+* Patch
+* Put
+* Delete

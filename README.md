@@ -26,6 +26,17 @@ If you want to filter the results by specific criteria, append the criteria para
 ### Embeds
 Embeds are a way to retrieve additional data that describes an element. For example, to retrieve a custom field of `summary` of a news entries, target `http://{name-of-your-site}.com/api/entry?section=news&embed=summary`.
 
+## Examples
+
+### Simple Example
+Below is a simple example with the endpoint `http://craft.dev/api/entry?section=bands&embed=title,url,plainText,richText`. This endpoint limits the 'entry' element type to the bands section, and allows for only one entry per page. Pagination is returned appropriately. In addtion to the entry model, some additional fields are returned, including the title, url and two custom fields, one of which is a plain text field and the other is a rich text field.
+
+![Simple Example](http://f.cl.ly/items/1I1O3Q3F02472t012e3n/simple-example.png "Simple Example")
+
+### Complex Example
+Below is a complex example with the endpoint `http://craft.dev/api/entry/3?embed=title,url,assets.url,categories.assets.users.tags`. There are a few things to note in this example. First, the entry was limited to specific entry by passing the entry's id after the element type (`http://craft.dev/api/entry/3`). Next, several addtional fields were embedded. In particular, the `assets.url` and `categories.assets.users.tags` embeds are fields that relate element types. Notice that the model for each of these related and nested ralationships are pulled in.
+
+![Complex Example](http://f.cl.ly/items/2x1h0p1q0v422a0a2C1l/complex-example.png "Complex Example")
 
 ## To-Do
 * Add config file for setting authentication keys and default embeds

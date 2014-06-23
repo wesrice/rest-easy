@@ -1,7 +1,7 @@
 REST Easy
 =========
 
-REST Easy is a plugin for Craft (http://buildwithcraft.com) that allows for enteration with Craft via a simple API.
+REST Easy is a plugin for Craft (http://buildwithcraft.com) that allows for integration with Craft via a simple API.
 
 ## Setup
 1. Install and enable the plugin

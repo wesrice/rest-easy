@@ -1,5 +1,6 @@
-REST Easy
+REST Easy [DEPRECIATED]
 =========
+**_Depreciated: This plugin is depreciated and no longer in active development. Please use [Restful Api] (https://github.com/airtype/restfulapi)._**
 
 REST Easy is a plugin for Craft (http://buildwithcraft.com) that allows for integration with Craft via a simple API.
 
